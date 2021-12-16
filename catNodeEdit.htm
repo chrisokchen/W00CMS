@@ -39,7 +39,13 @@
                 <div class="container">
                     <div class="title">
                         <h2>架構管理</h2>
-                    </div>
+						<div align="right">
+                          <a href="catNodeAdd.htm?dataParent=11&ctNodeKind=C"><button class="btn btn-primary btn-adv">
+                            新增目錄</button></a> 
+						  <a href="catNodeAdd.htm?dataParent=11&ctNodeKind=U"><button class="btn btn-primary btn-adv">
+                            新增單元</button></a> 
+						</div>
+					</div>
                     <!-- flex-12 -->
                     <div class="flex-3-9">
                         <div class="col ">
@@ -480,21 +486,22 @@
                                     <div class="flex-form">
                                         <div class="form_grp">
                                             <div class="labelEffect">
-                                                <input name="" type="text">
+                                                <input name="ctNodeKind" id="ctNodeKind" type="hidden" value="">
+                                                <input name="catName" id="catName" type="text">
                                                 <label>節點(選單)名稱<abbr>*</abbr></label>
                                             </div>
                                             <!-- <div class="help">說明文字</div> -->
                                         </div>
                                         <div class="form_grp">
                                             <div class="labelEffect">
-                                                <textarea></textarea>
+												<input name="unitDesc" id="unitDesc" type="text">
                                                 <label>節點簡介說明</label>
                                             </div>
                                             <!--div class="help">說明文字</div-->
                                         </div>
                                         <div class="form_grp">
                                             <div class="labelEffect">
-                                                <select id="" name="">
+                                                <select id="ctUnitId" name="ctUnitId">
                                                     <option value="" selected="" disabled="disabled"></option>
                                                     <optgroup label="主題單元結構">
                                                         <option value="1">主題單元1</option>
@@ -519,7 +526,7 @@
                                         </div>
                                         <div class="form_grp">
                                             <div class="labelEffect">
-                                                <input name="" type="file" value="">
+                                                <input name="ctNameLogo" id="ctNameLogo" type="file" value="">
                                                 <input name="" type="text" value="">
                                                 <button class="btn btn-primary btn-addfile">上傳</button>
                                                 <label>上傳節點圖片</label>
@@ -528,7 +535,7 @@
                                         </div>
                                         <div class="form_grp">
                                             <div class="labelEffect">
-                                                <input name="" type="text">
+                                                <input name="dcondition" id="dcondition" type="text">
                                                 <label>限制條件</label>
                                             </div>
                                             <!-- <div class="help">說明文字</div> -->
@@ -537,7 +544,7 @@
                                             <div class="form_title">排序<abbr>*</abbr></div>
                                             <div class="form_content form_inline">
                                                 <div class="labelEffect zip">
-                                                    <input name="" type="tel" value="10" class="used">
+                                                    <input name="catShowOrder" id="catShowOrder" type="text" value="10" class="used">
                                                 </div>
                                             </div>
                                         </div>
