@@ -482,21 +482,24 @@
                                     <div class="flex-form">
                                         <div class="form_grp">
                                             <div class="labelEffect">
-                                                <input name="" type="text">
+                                                <input name="dataParent" id="dataParent" type="hidden" value="">
+                                                <input name="CtRootID" id="CtRootID" type="hidden" value="">
+                                                <input name="ctNodeKind" id="ctNodeKind" type="hidden" value="">
+                                                <input name="catName" id="catName" type="text">
                                                 <label>節點(選單)名稱<abbr>*</abbr></label>
                                             </div>
                                             <!-- <div class="help">說明文字</div> -->
                                         </div>
                                         <div class="form_grp">
                                             <div class="labelEffect">
-                                                <textarea></textarea>
+												<input name="unitDesc" id="unitDesc" type="text">
                                                 <label>節點簡介說明</label>
                                             </div>
                                             <!--div class="help">說明文字</div-->
                                         </div>
                                         <div class="form_grp">
                                             <div class="labelEffect">
-                                                <select id="" name="">
+                                                <select id="ctUnitId" name="ctUnitId">
                                                     <option value="" selected="" disabled="disabled"></option>
                                                     <optgroup label="主題單元結構">
                                                         <option value="1">主題單元1</option>
@@ -522,7 +525,7 @@
                                         </div>
                                         <div class="form_grp">
                                             <div class="labelEffect">
-                                                <input name="" type="file" value="">
+                                                <input name="ctNameLogo" id="ctNameLogo" type="file" value="">
                                                 <input name="" type="text" value="">
                                                 <button class="btn btn-primary btn-addfile">上傳</button>
                                                  <label>上傳節點圖片</label>
@@ -531,7 +534,7 @@
                                         </div>
                                         <div class="form_grp">
                                             <div class="labelEffect">
-                                                <select id="" name="">
+                                                <select id="xslList" name="xslList">
                                                     <option value="" selected="" disabled="disabled"></option>
                                                     <option value="1">版型1</option>
                                                     <option value="2">版型2</option>
@@ -544,7 +547,7 @@
                                         </div>
                                         <div class="form_grp">
                                             <div class="labelEffect">
-                                                <select id="" name="">
+                                                <select id="xslData" name="xslData">
                                                     <option value="" selected="" disabled="disabled"></option>
                                                     <option value="1">版型1</option>
                                                     <option value="2">版型2</option>
@@ -594,6 +597,7 @@
                                                         <button class="btn" data-fancybox data-type="iframe" data-src="fancybox_userlist.htm" href="javascript:;"><i class="i_add"></i>選入使用者</button>
                                                     </div>
                                                 <div class="upload_block">
+													<div id="xx">xx</id>
                                                     <div class="attachment_list">
                                                         <div class="item">
                                                             <!-- number -->
@@ -643,18 +647,6 @@
                                         </div>
                                         <div class="form_grp" id="ifReview" style="display:none;">
                                             <div class="form_title">審稿權限</div>
-                                            <div class="form_content">
-                                                <div class="check_grp form_inline">
-                                                    <label><input name="" type="checkbox" value="" checked=""><span>系統管理員</span></label>
-                                                    <label><input name="" type="checkbox" value=""><span>網站管理員</span></label>
-                                                    <label><input name="" type="checkbox" value=""><span>資料上稿</span></label>
-                                                    <label><input name="" type="checkbox" value=""><span>臨時群組</span></label>
-                                                    <label><input name="" type="checkbox" value=""><span>權限群組1</span></label>
-                                                    <label><input name="" type="checkbox" value=""><span>權限群組2</span></label>
-                                                    <label><input name="" type="checkbox" value=""><span>權限群組權限群組3</span></label>
-                                                </div>
-                                                <!-- <div class="help">說明文字</div> -->
-                                            </div>
 
                                             <div class="setting_block" style="width: 100%;">
                                                     <div class="quick_btn">
@@ -809,6 +801,11 @@
                     swapThreshold: 0.65
                 });
             }
+			
+			function fancyCallback(xstr) {
+				//alert(xstr);
+				xx.innerHTML = xstr;
+			}
             </script>
             <script>
             $('header').load("header.htm");
