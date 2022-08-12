@@ -1,0 +1,91 @@
+.MultiCheckBox {
+    border:1px solid #e2e2e2;
+    padding: 5px;
+    border-radius:4px;
+    cursor:pointer;
+}
+
+.MultiCheckBox .k-icon{ 
+    font-size: 15px;
+    float: right;
+    font-weight: bolder;
+    margin-top: -7px;
+    height: 10px;
+    width: 14px;
+    color:#787878;
+} 
+
+.MultiCheckBoxDetail {
+    display:none;
+    position:absolute;
+    top:0;
+    border:1px solid #e2e2e2;
+    overflow-y:hidden;
+    background-color: #fff;
+    z-index: 9;
+}
+
+.MultiCheckBoxDetailBody {
+    overflow-y:scroll;
+}
+
+    .MultiCheckBoxDetail .cont  {
+        clear:both;
+        overflow: hidden;
+        padding: 2px;
+    }
+
+    .MultiCheckBoxDetail .cont:hover  {
+        background-color:#cfcfcf;
+    }
+
+    .MultiCheckBoxDetailBody > div > div {
+        float:left;
+    }
+
+.MultiCheckBoxDetail>div>div:nth-child(1) {
+}
+
+.MultiCheckBoxDetailHeader {
+    overflow:hidden;
+    position:relative;
+    height: 28px;
+    background-color:#3d3d3d;
+}
+
+    .MultiCheckBoxDetailHeader>input {
+        position: absolute;
+        top: 4px;
+        left: 3px;
+    }
+
+    .MultiCheckBoxDetailHeader>div {
+        position: absolute;
+        top: 5px;
+        left: 24px;
+        color:#fff;
+    }
+
+/*表單客製化暫用*/
+input[disabled][type="checkbox"]:checked {
+    box-shadow: none;
+    border:none;
+}
+
+table td span.green, table td span.red, table td span.orange {
+    min-width: 6em !important;
+}
+
+.setting_block .upload_block {
+    width: 100%;
+}
+
+.content_block .flex-form {
+    width: 96%;
+    max-width: 96%;
+}
+
+/*避免跑版暫用*/
+div .radio_grp label input:checked ~ span:after {
+    background: none;
+}
