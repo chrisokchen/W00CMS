@@ -108,12 +108,18 @@
                                                             <label>請輸入場地名稱<abbr>*</abbr></label>
                                                         </div>
                                                     </div>
+                                                    <div class="form_grp data-title">
+                                                        <div class="labelEffect">
+                                                            <input name="eroomName" id="eroomName" type="text" value="">
+                                                            <label>請輸入場地名稱(英文)</label>
+                                                        </div>
+                                                    </div>													
                                                 </div>
                                             </div>
                                             <div class="_content">
                                                 <!-- 測試 tinyMCE 自由編輯區 -->
                                                 <div class="cp user_edit" style="min-height:500px;">
-                                                    
+                                                    <h4>場地中文介紹</h4>
                                                     <textarea name="xbody" id="xbody" class="tinymce">
                                                         <h2 style="text-align: center;">101 全室</h2>
                                                         <p style="text-align: center;">
@@ -173,6 +179,16 @@
                                                     </textarea>
 
                                                 </div>
+                                                <div class="cp user_edit" style="min-height:500px;">
+                                                    <h4>場地英文介紹</h4>
+                                                    <textarea name="eroomDesc" id="eroomDesc" class="tinymce">
+                                                        <h2 style="text-align: center;">101 All Room</h2>
+                                                        <p>
+                                                            Room 101 could target to different kind application for flexible space such as 4 rooms (101A, 101B, 101C, 101D), or 2 rooms (101AB, 101CD), to fullfill 88 ~ 744 people.
+                                                        </p>
+                                                    </textarea>
+
+                                                </div>												
                                                 
                                                 <div class="setting_block">
                                                     <h4>設備與格局</h4>
@@ -204,7 +220,8 @@
                                                                 <label><input name="roomFloor" id="roomFloor" type="radio" value="4"><span>4F</span></label>
                                                                 <label><input name="roomFloor" id="roomFloor" type="radio" value="5"><span>5F</span></label>
                                                                 <label><input name="roomFloor" id="roomFloor" type="radio" value="6"><span>6F</span></label>
-                                                                <label><input name="roomFloor" id="roomFloor" type="radio" value="O">其他： <input name="roomFloorOther" id="roomFloorOther" type="text" value="" style="width:150px;border-radius:0;"></label>
+                                                                <label><input name="roomFloor" id="roomFloor" type="radio" value="O">其他： <input name="roomFloorOther" id="roomFloorOther" type="text" value="" style="width:150px;border-radius:0;" title="其他樓層名稱"> -|- 
+																<input name="roomFloorOther" id="eroomFloorOther" type="text" value="" style="width:150px;border-radius:0;" title="其他樓層名稱(英文)"></label>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -228,6 +245,7 @@
                                                                 <label>攤位數： <input name="roomLayout5" id="roomLayout5" type="text" value="" style="width:50px;"> 人</label>
                                                                 <!--label><input name="222" type="checkbox" value="">展覽： <input name="" type="text" value="" style="width:50px;"> 人</label-->
                                                                 <label>其他格局： <input name="roomLayouOther" type="text" value="" style="width:100px;">／<input name="roomLayout7" id="roomLayout7" type="text" value="" style="width:50px;"> 人</label>
+																<label>其他格局(英文)： <input name="roomLayouOther" type="text" value="" style="width:100px;"></label>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -236,11 +254,15 @@
                                                         <div class="form_content">
                                                             <div class="check_grp form_inline">
                                                                 <label><input name="roomDevice1" id="roomDevice1" type="checkbox" value="Y" checked><span>投影機(HD)</span></label>
-                                                                <label><input name="roomDevice2" id="roomDevice2" type="checkbox" value="Y" checked><span>PA音響設備/span></label>
+                                                                <label><input name="roomDevice2" id="roomDevice2" type="checkbox" value="Y" checked><span>PA音響設備</span></label>
                                                                 <label><input name="roomDevice3" id="roomDevice3" type="checkbox" value="Y" checked><span>聚光燈</span></label>
                                                                 <label><input name="roomDevice4" id="roomDevice4" type="checkbox" value="Y" checked><span>網際網路數據專線</span></label>
                                                                 <label><input name="roomDevice5" id="roomDevice5" type="checkbox" value="Y"><span>桌子</span></label>
                                                                 <label><input name="roomDevice6" id="roomDevice6" type="checkbox" value="Y"><span>座椅</span></label>
+																<label><input name="roomDevice7" id="roomDevice6" type="checkbox" value="Y"><span>其他設備</span></label>
+																<label><span>其他設備名稱</span><input name="roomDeviceOther" id="roomDeviceOther" type="text" value=""></label>
+																<label><span>其他設備名稱(英文)<input name="eroomDeviceOther" id="eroomDeviceOther" type="text" value="">
+																</span></label>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -518,7 +540,7 @@
                                                 <hr>
                                                 <!--備註-->
                                                 <div class="setting_block">
-                                                    <h4>備註</h4>
+                                                    <h4>中文備註</h4>
                                                     <div class="flex-form">
                                                         <div class="form_grp">
                                                             <div class="labelEffect">
@@ -529,6 +551,17 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="setting_block">
+                                                    <h4>英文備註</h4>
+                                                    <div class="flex-form">
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <textarea name="eabstract" id="eabstract">The number of tables and chairs TICC provided is limited as the standard capability listed in price list. </textarea>
+                                                                <!--label>備用Textarea欄位</label-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>												
                                             </div>
                                         </div>
                                         
@@ -579,7 +612,7 @@
                                                     </div>
 
                                                     <div class="flex-form">
-                                                        <h4>關聯文件(開啟lightbox選擇模式)
+                                                        <h4>關聯文件(中文)
                                                             <button class="btn btn-xs" data-fancybox="" data-type="iframe" data-src="fancybox_filelist.htm?ctUnit=109,110" href="javascript:;"><i class="i_addfile"></i>選入資料</button>
                                                         </h4>
                                                         <div class="upload_block">
@@ -606,8 +639,36 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+														
+                                                        <h4>關聯文件(英文)
+                                                            <button class="btn btn-xs" data-fancybox="" data-type="iframe" data-src="fancybox_filelist.htm?ctUnit=109,110" href="javascript:;"><i class="i_addfile"></i>選入資料</button>
+                                                        </h4>
+                                                        <div class="upload_block">
+                                                            <div class="attachment_list">
+                                                                <div class="item">
+                                                                    <!-- number -->
+                                                                    <div class="num">
+                                                                        <span>1</span>
+                                                                    </div>
+                                                                    <span>最新優惠｜網路需求表暨通案優惠方案測試測試 </span>
+                                                                    <div class="btn_grp" style="flex-basis:100px; margin-left:15px;">
+                                                                        <button class="btn btn-delete"><i class="i_trash"></i></button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item">
+                                                                    <!-- number -->
+                                                                    <div class="num">
+                                                                        <span>2</span>
+                                                                    </div>
+                                                                    <span>場地價目表｜會場租金價目表 </span>
+                                                                    <div class="btn_grp" style="flex-basis:100px; margin-left:15px;">
+                                                                        <button class="btn btn-delete"><i class="i_trash"></i></button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>														
 
-                                                        <h4>關聯問答(開啟lightbox選擇模式)
+                                                        <h4>關聯問答(中文)
                                                             <button class="btn btn-xs" data-fancybox="" data-type="iframe" data-src="fancybox_filelist.htm?ctUnit=105" href="javascript:;"><i class="i_addfile"></i>選入資料</button>
                                                         </h4>
                                                         <div class="upload_block" style="clear:both;">
@@ -634,6 +695,34 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+
+                                                        <h4>關聯問答(英文)
+                                                            <button class="btn btn-xs" data-fancybox="" data-type="iframe" data-src="fancybox_filelist.htm?ctUnit=105" href="javascript:;"><i class="i_addfile"></i>選入資料</button>
+                                                        </h4>
+                                                        <div class="upload_block" style="clear:both;">
+                                                            <div class="attachment_list">
+                                                                <div class="item">
+                                                                    <!-- number -->
+                                                                    <div class="num">
+                                                                        <span>1</span>
+                                                                    </div>
+                                                                    <span>關於TICC｜前往TICC如何搭乘大眾捷運? </span>
+                                                                    <div class="btn_grp" style="flex-basis:100px; margin-left:15px;">
+                                                                        <button class="btn btn-delete"><i class="i_trash"></i></button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item">
+                                                                    <!-- number -->
+                                                                    <div class="num">
+                                                                        <span>2</span>
+                                                                    </div>
+                                                                    <span>會展設施｜外貿協會經營那些會展設施 </span>
+                                                                    <div class="btn_grp" style="flex-basis:100px; margin-left:15px;">
+                                                                        <button class="btn btn-delete"><i class="i_trash"></i></button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>														
                                                     </div>
 
                                                     <hr>
