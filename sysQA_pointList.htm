@@ -39,7 +39,7 @@
             <div class="grid">
                 <div class="container">
                     <div class="title">
-                        <h2>答題列表</h2>
+                        <h2>點數管理列表</h2>
                         <button class="btn btn-primary btn-adv">
                             <i class="i_search"></i></button>
                     </div>
@@ -55,23 +55,11 @@
                                         <div class="flex-form flex-8-4">
                                             <div class="form_grp">
                                                 <div class="labelEffect">
-                                                    <select name="search_QA_check" id="search_QA_check">
-														<option value="" selected="" disabled="disabled"></option>
-														<option value="1">答對</option>
-														<option value="2">答錯</option>
-														<option value="0">未審核</option>
-                                                    </select>
-                                                    <label>答案審核</label>
+                                                    <input name="search_user_id" id="search_user_id" type="text">
+                                                    <label>借閱證號碼</label>
                                                 </div>
 
-												<div class="labelEffect">
-                                                    <select name="search_QAType" id="search_QAType">
-														<option value="" selected="" disabled="disabled"></option>
-														<option value="O">線上</option>
-														<option value="P">書面</option>
-                                                    </select>
-                                                    <label>答題方式</label>
-                                                </div>												
+																		
                                             </div>
                                             <div class="form_grp">
                                                 <div class="labelEffect">
@@ -136,7 +124,6 @@
                                         </form>
                                     </div>
                                     <div class="quick_btn">
-                                        <button class="btn btn-orange" onclick="window.location.href='sysQA_answerAdd.htm?qid={qid}';"><i class="i_add"></i>新增書面答題資料</button>
                                     </div>
                                 </div>
                                 <div class="_content">
@@ -145,39 +132,51 @@
                                         <table class="table_hover">
                                             <thead>
                                                 <tr>
-                                                    <th>序號</th>
-                                                    <th>姓名</th>
                                                     <th>借閱證號碼</th>
-                                                    <th>答題日期</th>
-                                                    <th>答案審核</th>
-                                                    <th>線上/書面</th>
+                                                    <th>讀者姓名</th>
+                                                    <th>累積點數</th>
+                                                    <th>已兌換點數</th>
+                                                    <th>剩餘點數</th>
+                                                    <th>兌換</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td class="num" nowrap>476424</td>
-                                                    <td><a href="sysQA_userinfo.htm?uid=476424">周岳祥 (Mr)</a></td>
-                                                    <td>A132386549</td>
-                                                    <td>2022/1/19 下午 03:56:38</td>
-                                                    <td>答對</td>
-													<td>線上</td>
+                                                    <td align="center">A13061830601</td>
+                                                    <td align="center">周岳祥 (Mr)</td>
+                                                    <td align="center"><a href="sysQA_pointLogList.htm?user_id=A13061830601">5</td>
+                                                    <td align="center"><a href="sysQA_pointUseList.htm?user_id=A13061830601">5</td>
+                                                    <td align="center">5</td>
+													<td align="center">
+                                                        <div class="btn_grp">
+                                                            <a href="sysQA_pointUse.htm?user_id=A13061830601" class="btn">兌換</a>
+                                                        </div>
+													</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="num" nowrap>476221</td>
-                                                    <td><a href="sysQA_userinfo.htm?uid=476221">郭泰佑 (Mr)</a></td>
-                                                    <td>A132690208</td>
-                                                    <td>22022/1/14 上午 10:58:42</td>
-                                                    <td>答錯</td>
-													<td>書面</td>
-                                                </tr>
+                                                    <td align="center">A13081924104</td>
+                                                    <td align="center">李秉睿 (Mr)</td>
+                                                    <td align="center"><a href="sysQA_pointLogList.htm?user_id=A13081924104">190</td>
+                                                    <td align="cente"r><a href="sysQA_pointUseList.htm?user_id=A13081924104">170</td>
+                                                    <td align="center">20</td>
+													<td align="center">
+                                                        <div class="btn_grp">
+                                                            <a href="sysQA_pointUse.htm?user_id=A13061830601" class="btn">兌換</a>
+                                                        </div>
+													</td>                                                
+												</tr>
                                                 <tr>
-                                                    <td class="num" nowrap>476208</td>
-                                                    <td><a href="sysQA_userinfo.htm?uid=476208">宋誼恩 (Ms)</a></td>
-                                                    <td>A232283956</td>
-                                                    <td>2022/1/13 下午 05:00:25</td>
-                                                    <td>答對</td>
-													<td>書面</td>
-                                                </tr>
+                                                    <td align="center">A13097799900</td>
+                                                    <td align="center">黃以翔 (Mr)</td>
+                                                    <td align="center"><a href="sysQA_pointLogList.htm?user_id=A13097799900">16</td>
+                                                    <td align="center"><a href="sysQA_pointUseList.htm?user_id=A13097799900">10</td>
+                                                    <td align="center">6</td>
+													<td align="center">
+                                                        <div class="btn_grp">
+                                                            <a href="sysQA_pointUse.htm" class="btn?user_id=A13061830601">兌換</a>
+                                                        </div>
+													</td>                                                
+												</tr>
                                             </tbody>
                                         </table>
                                     </div>
